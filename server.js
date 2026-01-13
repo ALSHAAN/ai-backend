@@ -11,9 +11,11 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cors());
 
+
 app.get("/", (req, res) => {
   res.json({ status: "Thinkr AI backend running ✅" });
 });
+
 
 app.use("/api", chatRoutes);
 
